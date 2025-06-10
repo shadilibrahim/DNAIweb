@@ -143,6 +143,9 @@ body {
   background-color: var(--white);
   color: var(--purple-navy);
   font-size: 1.6rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 ::-webkit-scrollbar { width: 10px; }
@@ -351,7 +354,7 @@ body {
                     url("../images/hero-bg.png"),
                     var(--gradient-1);
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: -280px bottom, center, center;
+  background-position:  bottom, center, center;
   background-size: auto, cover, auto;
   padding-block-start: 120px;
   padding-block-end: var(--section-padding);
@@ -420,6 +423,13 @@ body {
 
 .stats-text { font-size: var(--fs-8); }
 
+.about {
+  padding-block: var(--section-padding);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
 
 
 
@@ -445,7 +455,7 @@ body {
   background-size: contain;
   background-color: hsla(335, 87%, 53%, 0.12);
   aspect-ratio: 1 / 1;
-  max-width: 165px;
+  max-width: 170px;
   display: grid;
   place-content: center;
   margin-inline: auto;
@@ -487,6 +497,13 @@ body {
   background-color: var(--winter-sky);
 }
 
+.service {
+  padding-block: var(--section-padding);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
 
 
 
@@ -525,6 +542,13 @@ body {
   margin-inline: auto;
 }
 
+.features {
+  padding-block: var(--section-padding);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
 
 
 
@@ -533,7 +557,12 @@ body {
   #BLOG
 \*-----------------------------------*/
 
-.blog { padding-block-end: 120px; }
+.blog {
+  padding-block: var(--section-padding);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
 
 .blog-list {
   display: grid;
@@ -606,17 +635,44 @@ body {
   #FOOTER
 \*-----------------------------------*/
 
-.footer { font-size: var(--fs-8); }
-
-.footer a { color: inherit; }
+.footer {
+  position: relative;
+  margin-top: auto;
+}
 
 .footer-top {
   background-image: url("../images/footer-bg.png"), var(--gradient-1);
   background-repeat: no-repeat;
-  background-size: auto, 200%;
+  background-size: cover, 200%;
   background-position: center, center;
   color: var(--white);
+  padding: var(--section-padding) 0;
+  position: relative;
 }
+
+.footer-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.footer-top .container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.footer { font-size: var(--fs-8); }
+
+.footer a { color: inherit; }
 
 .footer-brand { margin-block-end: 30px; }
 
@@ -1047,4 +1103,101 @@ body {
 
   .footer-brand { grid-column: auto; }
 
+}
+
+.footer-top .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.map-container {
+  width: 100%;
+  height: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background-color: var(--white);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 991px) {
+  .footer-top .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .map-container {
+    height: 350px;
+  }
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.form-title {
+  color: var(--white);
+  font-size: var(--fs-4);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  font-size: var(--fs-8);
+  transition: var(--transition-1);
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-input:focus {
+  border-color: var(--winter-sky);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+textarea.form-input {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  background: var(--winter-sky);
+  border: none;
+  transition: var(--transition-1);
+}
+
+.submit-btn:hover {
+  background: var(--razzmatazz);
+  transform: translateY(-2px);
+}
+
+.submit-btn ion-icon {
+  font-size: 18px;
 }

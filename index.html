@@ -75,7 +75,7 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link" data-navbar-link>Contact Us</a>
+            <a href="#contact" class="navbar-link" data-navbar-link>Contact Us</a>
           </li>
 
         </ul>
@@ -119,7 +119,7 @@
               Building cutting-edge AI and ML solutions while nurturing the next generation of tech leaders.
             </p>
 
-            <button class="btn">VIEW SERVICES</button>
+            <a href="#services" class="btn" style="width: fit-content;">VIEW SERVICES</a>
 
           </div>
 
@@ -324,7 +324,7 @@
           </ul>
 
           <figure class="features-banner">
-            <img src="./assets/images/feautres-banner.png" width="369" height="318" loading="lazy" alt="Features Banner"
+            <img src="./assets/images/feautres-banner.png" width="370" height="318" loading="lazy" alt="Features Banner"
               class="w-100 banner-animation">
           </figure>
 
@@ -598,43 +598,36 @@
     - #FOOTER
   -->
 
-  <footer class="footer">
+  <footer class="footer" id="contact">
 
     <div class="footer-top section">
       <div class="container">
 
         <div class="footer-brand" style="width: 400px;">
+          <form id="contactForm" class="contact-form" action="https://formspree.io/f/datanextai@gmail.com" method="POST">
+            <h3 class="form-title">Send us a Message</h3>
+            
+            <div class="form-group">
+              <input type="text" name="name" id="name" class="form-input" placeholder="Your Name" required>
+            </div>
 
-          <a href="#" class="logo">Connect with our Team </a>
+            <div class="form-group">
+              <input type="tel" name="phone" id="phone" class="form-input" placeholder="Phone Number" required>
+            </div>
 
-          <p class="text">
-            Maecenas pellentesque placerat quam, in finibus nisl tincidunt sed. Aliquam magna augue, malesuada ut
-            feugiat eget,
-            cursus eget felis.
-          </p>
+            <div class="form-group">
+              <input type="email" name="email" id="email" class="form-input" placeholder="Email Address" required>
+            </div>
 
-          <ul class="social-list">
+            <div class="form-group">
+              <textarea name="message" id="message" class="form-input" placeholder="Your Message" rows="4" required></textarea>
+            </div>
 
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-          </ul>
-
+            <button type="submit" class="btn submit-btn">
+              <span>Send Message</span>
+              <ion-icon name="paper-plane-outline"></ion-icon>
+            </button>
+          </form>
         </div>
 
         
@@ -642,7 +635,7 @@
         <ul class="footer-list" style="margin-left: 20px; width: 300px;">
 
           <li>
-            <p class="footer-list-title">Contact Us</p>
+            <p class="footer-list-title" style="text-align: center;">Contact Us</p>
           </li>
 
           <li class="footer-item">
@@ -652,8 +645,7 @@
             </div>
 
             <div>
-              <a href="tel:+918792895335" class="footer-item-link">+918792895335</a>
-              <!-- <a href="tel:+2486871365" class="footer-item-link">+248-687-1365</a> -->
+              <a href="tel:+918792895335" class="footer-item-link">+91 8792895335</a>
             </div>
 
           </li>
@@ -666,7 +658,6 @@
 
             <div>
               <a href="mailto:info@desinic.com" class="footer-item-link">info@datanextai.com</a>
-              <!-- <a href="mailto:help@desinic.com" class="footer-item-link">help@desinic.com</a> -->
             </div>
 
           </li>
@@ -684,6 +675,17 @@
           </li>
 
         </ul>
+
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0163257154347!2d74.83102745884203!3d12.91823958947634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU1JzA1LjciTiA3NMKwNDknNTEuNyJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
 
       </div>
     </div>
