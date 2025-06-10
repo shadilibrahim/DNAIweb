@@ -90,3 +90,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// Logo color transition
+const logo = document.querySelector('.logo');
+const heroSection = document.querySelector('#home');
+
+const handleLogoColor = () => {
+  const heroBottom = heroSection.getBoundingClientRect().bottom;
+  
+  if (heroBottom <= 0) {
+    logo.classList.remove('not-scrolled');
+    logo.classList.add('scrolled');
+  } else {
+    logo.classList.remove('scrolled');
+    logo.classList.add('not-scrolled');
+  }
+};
+
+// Initial check
+handleLogoColor();
+
+// Add scroll event listener
+window.addEventListener('scroll', handleLogoColor);
