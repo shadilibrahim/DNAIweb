@@ -25,6 +25,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Source+Sans+Pro:wght@600;700&display=swap"
     rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body id="top">
@@ -39,7 +42,7 @@
       <div class="overlay" data-overlay></div>
 
       <a href="#">
-        <h1 class="logo">DATA NEXT AI</h1>
+        <h1 class="logo" href="#home">DATA NEXT AI</h1>
       </a>
 
       <nav class="navbar" data-navbar>
@@ -109,10 +112,7 @@
       <section class="hero" id="home">
         <div class="container">
 
-          <div class="hero-content">
-
-            <!-- <p class="hero-subtitle">We Are Product Designer From UK</p> -->
-
+          <div class="hero-content" data-aos="fade-up">
             <h2 class="h2 hero-title">DATA NEXT AI</h2>
 
             <p class="hero-text">
@@ -120,10 +120,9 @@
             </p>
 
             <a href="#services" class="btn" style="width: fit-content;">VIEW SERVICES</a>
-
           </div>
 
-          <figure class="hero-banner">
+          <figure class="hero-banner" data-aos="fade-left" data-aos-delay="200">
             <img src="./assets/images/hero-banner.png" width="694" height="529" loading="lazy" alt="hero-banner"
               class="w-100 banner-animation">
           </figure>
@@ -142,13 +141,12 @@
       <section class="section about" id="about">
         <div class="container">
 
-          <figure class="about-banner">
+          <figure class="about-banner" data-aos="fade-right">
             <img src="./assets/images/about-banner.png" width="700" height="532" loading="lazy" alt="about banner"
               class="w-100 banner-animation">
           </figure>
 
-          <div class="about-content">
-
+          <div class="about-content" data-aos="fade-left">
             <p class="hero-subtitle">EMPOWERING INNOVATION</p>
 
             <h3 class="h3 section-title underline">We transform Ideas into Reality</h3>
@@ -162,27 +160,21 @@
             </p>
 
             <ul class="stats-list">
-
-              <li class="stats-card">
+              <li class="stats-card" data-aos="zoom-in" data-aos-delay="100">
                 <p class="h3 stats-title">5+</p>
-
                 <p class="stats-text">Satisfied Clients</p>
               </li>
 
-              <li class="stats-card">
+              <li class="stats-card" data-aos="zoom-in" data-aos-delay="200">
                 <p class="h3 stats-title">7+</p>
-
                 <p class="stats-text">Project Lunched</p>
               </li>
 
-              <li class="stats-card">
+              <li class="stats-card" data-aos="zoom-in" data-aos-delay="300">
                 <p class="h3 stats-title">5+</p>
-
                 <p class="stats-text">Team</p>
               </li>
-
             </ul>
-
           </div>
 
         </div>
@@ -198,73 +190,55 @@
 
       <section class="section service" id="services">
         <div class="container">
+          <p class="hero-subtitle" style="text-align: center;" data-aos="fade-up">OUR EXPERTISE</p>
 
-          <p class="hero-subtitle" style="text-align: center;">OUR EXPERTISE</p>
-
-          <h2 class="h2 section-title underline">Tailored AI & ML Solutions</h2>
+          <h2 class="h2 section-title underline" data-aos="fade-up">Tailored AI & ML Solutions</h2>
 
           <ul class="service-list">
-
-            <li>
+            <li data-aos="fade-up" data-aos-delay="100">
               <div class="service-card">
-
                 <div class="card-icon">
                   <ion-icon name="telescope-outline"></ion-icon>
                 </div>
-
                 <h3 class="h3 title">Custom AI solutions</h3>
-
                 <p class="text">
                   Tailored AI solutions to meet your business challenges.
                 </p>
-
                 <button class="card-btn" aria-label="Show More">
                   <ion-icon name="chevron-forward-outline"></ion-icon>
                 </button>
-
               </div>
             </li>
 
-            <li>
+            <li data-aos="fade-up" data-aos-delay="200">
               <div class="service-card">
-
                 <div class="card-icon">
                   <ion-icon name="desktop-outline"></ion-icon>
                 </div>
-
                 <h3 class="h3 title">ML Development</h3>
-
                 <p class="text">
                   Harness the power of machine learning for your business.
                 </p>
-
                 <button class="card-btn" aria-label="Show More">
                   <ion-icon name="chevron-forward-outline"></ion-icon>
                 </button>
-
               </div>
             </li>
 
-            <li>
+            <li data-aos="fade-up" data-aos-delay="300">
               <div class="service-card">
-
                 <div class="card-icon">
                   <ion-icon name="globe-outline"></ion-icon>
                 </div>
-
                 <h3 class="h3 title">AI & ML Training programs</h3>
-
                 <p class="text">
                   Comprehensive training to empower your team with AI skills.
                 </p>
-
                 <button class="card-btn" aria-label="Show More">
                   <ion-icon name="chevron-forward-outline"></ion-icon>
                 </button>
-
               </div>
             </li>
-
           </ul>
 
         </div>
@@ -280,94 +254,60 @@
 
       <section class="section features" id="features">
         <div class="container">
-
-          <h2 class="h2 section-title underline">Our Features</h2>
+          <h2 class="h2 section-title underline" data-aos="fade-up">Our Features</h2>
 
           <ul class="features-list">
-
-            <li>
+            <li data-aos="fade-right">
               <div class="features-card">
-
                 <div class="icon">
                   <ion-icon name="bulb-outline"></ion-icon>
                 </div>
-
                 <div class="content">
                   <h3 class="h3 title" style="margin-top: 20px;">Idea & Analysis</h3>
-
-                  <!-- <p class="text">
-                    Praesent tincidunt congue est ut hendrerit. Pellentesque et eros sit amet ipsum venenatis.
-                  </p> -->
                 </div>
-
               </div>
             </li>
 
-            <li>
+            <li data-aos="fade-left">
               <div class="features-card">
-
                 <div class="icon">
                   <ion-icon name="color-palette-outline"></ion-icon>
                 </div>
-
                 <div class="content">
                   <h3 class="h3 title" style="margin-top: 20px;">Designing</h3>
-
-                  <!-- <p class="text">
-                    Praesent tincidunt congue est ut hendrerit. Pellentesque et eros sit amet ipsum venenatis.
-                  </p> -->
                 </div>
-
               </div>
             </li>
-
           </ul>
 
-          <figure class="features-banner">
+          <figure class="features-banner" data-aos="zoom-in">
             <img src="./assets/images/feautres-banner.png" width="370" height="318" loading="lazy" alt="Features Banner"
               class="w-100 banner-animation">
           </figure>
 
           <ul class="features-list">
-
-            <li>
+            <li data-aos="fade-right">
               <div class="features-card">
-
                 <div class="icon">
                   <ion-icon name="code-slash-outline"></ion-icon>
                 </div>
-
                 <div class="content">
                   <h3 class="h3 title" style="margin-top: 20px;">Development</h3>
-
-                  <!-- <p class="text">
-                    Praesent tincidunt congue est ut hendrerit. Pellentesque et eros sit amet ipsum venenatis.
-                  </p> -->
                 </div>
-
               </div>
             </li>
 
-            <li>
+            <li data-aos="fade-left">
               <div class="features-card">
-
                 <div class="icon">
                   <ion-icon name="rocket-outline"></ion-icon>
                 </div>
-
                 <div class="content">
                   <h3 class="h3 title" style="margin-top: 20px;">Testing & Lunching</h3>
-
-                  <!-- <p class="text">
-                    Praesent tincidunt congue est ut hendrerit. Pellentesque et eros sit amet ipsum venenatis.
-                  </p> -->
                 </div>
-
               </div>
             </li>
-
           </ul>
-
         </div>
       </section>
 
@@ -724,6 +664,16 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+  </script>
 
 </body>
 
