@@ -544,7 +544,7 @@
       <div class="container">
 
         <div class="footer-brand" style="width: 400px;">
-          <form id="contactForm" class="contact-form" onsubmit="submitForm(event)">
+          <form id="contactForm" class="contact-form" action="https://formspree.io/f/datanextai@gmail.com" method="POST">
             <h3 class="form-title">Send us a Message</h3>
             
             <div class="form-group">
@@ -570,35 +570,7 @@
           </form>
         </div>
 
-        <script>
-          function submitForm(event) {
-            event.preventDefault();
-            
-            const formData = {
-              name: document.getElementById('name').value,
-              phone: document.getElementById('phone').value,
-              email: document.getElementById('email').value,
-              message: document.getElementById('message').value
-            };
-
-            fetch('https://script.google.com/macros/s/AKfycbwMq7UP2k_BzcujD2vzcerwWreDC049vwKK-GiOpCXPf8XEuxNKYD9AT9tHd6e3jsKx/exec', {
-              method: 'POST',
-              mode: 'no-cors',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(formData)
-            })
-            .then(() => {
-              alert('Message sent successfully!');
-              document.getElementById('contactForm').reset();
-            })
-            .catch(error => {
-              console.error('Error:', error);
-              alert('There was an error sending your message. Please try again.');
-            });
-          }
-        </script>
+        
 
         <ul class="footer-list" style="margin-left: 20px; width: 300px;">
 
