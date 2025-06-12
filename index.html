@@ -30,6 +30,55 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contactForm');
+  
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const submitBtn = this.querySelector('.submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span>Sending...</span>';
+    
+    // Get form data and convert to URL-encoded string
+    const formData = new URLSearchParams(new FormData(this)).toString();
+    
+    fetch(this.action, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: formData,
+      redirect: 'follow'
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (data.result === 'success') {
+        alert('Message sent successfully!');
+        contactForm.reset();
+      } else {
+        throw new Error(data.error || 'Unknown server error');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Error sending message: ' + error.message);
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<span>Send Message</span><ion-icon name="paper-plane-outline"></ion-icon>';
+    });
+  });
+});
+</script>
+
+
 <body id="top">
 
   <!-- 
@@ -544,7 +593,7 @@
       <div class="container">
 
         <div class="footer-brand" style="width: 400px;">
-          <form id="contactForm" class="contact-form" action="https://formspree.io/f/datanextai@gmail.com" method="POST">
+          <form id="contactForm" class="contact-form" action="https://script.google.com/macros/s/AKfycbwRTO7ONI5ESWsnLa7ltbHY8cWVpdyvBoZ7dU4JBF6NsxjX2_BGnlvEBMT_sGOXevMI/exec" method="POST">
             <h3 class="form-title">Send us a Message</h3>
             
             <div class="form-group">
