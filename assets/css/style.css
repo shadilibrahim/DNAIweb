@@ -797,6 +797,270 @@ body {
 
 
 /*-----------------------------------*\
+  #POPUP STYLES
+\*-----------------------------------*/
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4444;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  padding: 8px;
+  transition: var(--transition-1);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+.close-btn:hover {
+  background: #ff0000;
+  transform: scale(1.1);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.poster-container {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.popup-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.apply-btn {
+  display: inline-block;
+  background: var(--winter-sky);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: var(--fw-600);
+  transition: var(--transition-1);
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 15px 0 25px;
+}
+
+.apply-btn:hover {
+  background: var(--razzmatazz);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.popup-description {
+  text-align: center;
+  overflow-y: auto;
+  max-height: 50vh;
+  padding-right: 10px;
+}
+
+.popup-description h2 {
+  margin-bottom: 10px;
+  color: var(--space-cadet-1);
+  font-family: var(--ff-source-sans-pro);
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+  padding: 10px 0;
+  z-index: 1;
+}
+
+.popup-description p {
+  color: var(--purple-navy);
+  line-height: 1.5;
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* Custom scrollbar for the popup description */
+.popup-description::-webkit-scrollbar {
+  width: 6px;
+}
+
+.popup-description::-webkit-scrollbar-track {
+  background: var(--platinum);
+  border-radius: 3px;
+}
+
+.popup-description::-webkit-scrollbar-thumb {
+  background: var(--purple-navy);
+  border-radius: 3px;
+}
+
+.popup-description::-webkit-scrollbar-thumb:hover {
+  background: var(--winter-sky);
+}
+
+/* Animation Classes */
+.animate-fade-up {
+  animation: fadeInUp var(--animation-duration) var(--animation-timing) forwards;
+}
+
+.animate-fade-left {
+  animation: fadeInLeft var(--animation-duration) var(--animation-timing) forwards;
+}
+
+.animate-fade-right {
+  animation: fadeInRight var(--animation-duration) var(--animation-timing) forwards;
+}
+
+.animate-scale {
+  animation: scaleIn var(--animation-duration) var(--animation-timing) forwards;
+}
+
+.animate-slide {
+  animation: slideIn var(--animation-duration) var(--animation-timing) forwards;
+}
+
+/* Apply animations to elements */
+.hero-content {
+  opacity: 0;
+  animation: fadeInUp var(--animation-duration) var(--animation-timing) forwards;
+}
+
+.hero-banner {
+  opacity: 0;
+  animation: fadeInRight var(--animation-duration) var(--animation-timing) forwards;
+  animation-delay: 0.2s;
+}
+
+.about-banner {
+  opacity: 0;
+  animation: fadeInLeft var(--animation-duration) var(--animation-timing) forwards;
+}
+
+.about-content {
+  opacity: 0;
+  animation: fadeInRight var(--animation-duration) var(--animation-timing) forwards;
+}
+
+.service-card {
+  opacity: 0;
+  animation: scaleIn var(--animation-duration) var(--animation-timing) forwards;
+}
+
+.features-card {
+  opacity: 0;
+  animation: fadeInUp var(--animation-duration) var(--animation-timing) forwards;
+}
+
+.features-banner {
+  opacity: 0;
+  animation: scaleIn var(--animation-duration) var(--animation-timing) forwards;
+}
+
+.footer-brand {
+  opacity: 0;
+  animation: fadeInUp var(--animation-duration) var(--animation-timing) forwards;
+}
+
+.footer-list {
+  opacity: 0;
+  animation: fadeInUp var(--animation-duration) var(--animation-timing) forwards;
+  animation-delay: 0.2s;
+}
+
+.map-container {
+  opacity: 0;
+  animation: fadeInUp var(--animation-duration) var(--animation-timing) forwards;
+  animation-delay: 0.4s;
+}
+
+/* Hover animations */
+.btn {
+  transition: transform 0.3s var(--animation-timing);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.service-card {
+  transition: transform 0.3s var(--animation-timing);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.features-card {
+  transition: transform 0.3s var(--animation-timing);
+}
+
+.features-card:hover {
+  transform: translateX(5px);
+}
+
+.navbar-link {
+  position: relative;
+  transition: color 0.3s var(--animation-timing);
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--winter-sky);
+  transition: width 0.3s var(--animation-timing);
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+/* Scroll animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s var(--animation-timing);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
 

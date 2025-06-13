@@ -724,6 +724,68 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   </script>
 
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <button class="close-btn">&times;</button>
+      <div class="poster-container">
+        <img src="assets\images\Hiring.png" alt="Popup Image" class="popup-image">
+      </div>
+      <div class="popup-description">
+        <h2>We are Hiring!</h2>
+        <a href="http://bit.ly/internsjob" target="_blank" class="apply-btn">Apply Now</a>
+        <p>🚀 Kickstart Your Career with Data Next AI! 🤖
+          We're on the hunt for passionate, driven, and curious interns to join our growing team! 🌱
+          If you're excited about coding, AI, and building real-world tech—this is your moment! 💡✨
+          
+          🔓 Open Positions:
+          👨‍💻 Full Stack Developer Intern
+          – Work with frontend & backend technologies 🌐
+          – Build scalable web apps & APIs 🚀
+          – Gain real-world project experience 🧩
+          
+          🧠 ML Developer Intern
+          – Dive into machine learning models & data preprocessing 📊
+          – Work on AI & CV projects using Python, TensorFlow, etc. 🐍🤓
+          – Collaborate on real-time ML solutions 💻
+          
+          🎁 What We Offer:
+          ✅ Internship Certificate & Letter of Recommendation 🏅
+          ✅ Flexible Work Culture 🕒
+          ✅ Hands-on Learning with Industry Mentors 🎓
+          ✅ Opportunities to grow and innovate daily 🌱
+          
+          📍Location: Remote/Hybrid
+          📅 Apply Before It's Too Late! Limited seats available!
+          <!-- 👉 Apply Now: bit.ly/internsjob
+          📲 Or Scan the QR Code below to Apply! 📸🧾 -->
+          For more information, contact us at: ‪+91-8792895335‬ (WhatsApp)
+          
+          Be a part of the AI revolution with Data Next AI! 🌟 Your future begins here.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const popup = document.getElementById('popup');
+      const closeBtn = document.querySelector('.close-btn');
+
+      // Show popup when page loads
+      popup.style.display = 'flex';
+
+      // Close popup when close button is clicked
+      closeBtn.addEventListener('click', function() {
+        popup.style.display = 'none';
+      });
+
+      // Automatically hide popup after 60 seconds
+      setTimeout(function() {
+        popup.style.display = 'none';
+      }, 20000);
+    });
+  </script>
+
 </body>
 
 </html>
